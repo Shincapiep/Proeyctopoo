@@ -12,7 +12,7 @@ package Data;
 public class Pelicula {
     private String Nombre_pelicula,Descripcion,Clasificacion, Hora_proyeccion;
     private int Duracion;// en minutos
-
+    
     public Pelicula(String Nombre_pelicula, String Descripcion, String Clasificacion, String Hora_proyeccion, int Duracion) {
         this.Nombre_pelicula = Nombre_pelicula;
         this.Descripcion = Descripcion;
