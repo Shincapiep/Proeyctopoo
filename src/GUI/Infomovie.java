@@ -28,30 +28,131 @@ public class Infomovie extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        LabelSeleccionHorario = new javax.swing.JLabel();
+        ComboBoxHorario = new javax.swing.JComboBox<>();
+        LabelNumeroAsientos = new javax.swing.JLabel();
+        TextFieldNumeroAsientos = new javax.swing.JTextField();
+        ButtonAtras = new javax.swing.JButton();
+        ButtonAtras1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png"))); // NOI18N
         jLabel2.setText("Imagen");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("\nDirector: Carlos César Arbeláezr.\nGénero: Drama.\nEstreno: 11 marzo 2011.\nDuración: 88 minutos.\nSinopsis:\nManuel, un niño de nueve años, que juega al fútbol\n todos los días en el campo con una vieja pelota,\nsueña con llegar a ser un gran guardameta.\nSu alegría es enorme cuando su padre, le regala un\nbalón nuevo; pero, desgraciadamente, un accidente\ninesperado hace que el balón caiga en un campo\nminado. A pesar del peligro que supone, Manuel,\nno está dispuesto a renunciar a su balón, convence\na sus dos mejores amigos,para que le ayuden a\nrecuperarlo. En medio de las aventuras y los juegos\ninfantiles. Los signos de un conflicto armado\nperturban la vida de los habitantes de La Pradera. ");
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        LabelSeleccionHorario.setText("Seleccione el horario");
+
+        ComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxHorarioActionPerformed(evt);
+            }
+        });
+
+        LabelNumeroAsientos.setText("Cantidad entradas");
+
+        TextFieldNumeroAsientos.setText("1");
+        TextFieldNumeroAsientos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldNumeroAsientosActionPerformed(evt);
+            }
+        });
+
+        ButtonAtras.setText("Atras");
+        ButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtrasActionPerformed(evt);
+            }
+        });
+
+        ButtonAtras1.setText("Continuar");
+        ButtonAtras1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtras1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelSeleccionHorario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(179, 179, 179)
+                .addComponent(ButtonAtras)
+                .addGap(28, 28, 28)
+                .addComponent(ButtonAtras1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LabelSeleccionHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonAtras)
+                    .addComponent(ButtonAtras1))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void TextFieldNumeroAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldNumeroAsientosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldNumeroAsientosActionPerformed
+
+    private void ComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxHorarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxHorarioActionPerformed
+
+    private void ButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtrasActionPerformed
+        this.dispose();
+        numeroasientosyfecha cartelera = new numeroasientosyfecha();
+        cartelera.setVisible(true);
+    }//GEN-LAST:event_ButtonAtrasActionPerformed
+
+    private void ButtonAtras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtras1ActionPerformed
+        this.dispose();
+        AsientosCine asientos = new AsientosCine();
+        asientos.setVisible(true);
+        
+    }//GEN-LAST:event_ButtonAtras1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +190,14 @@ public class Infomovie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonAtras;
+    private javax.swing.JButton ButtonAtras1;
+    private javax.swing.JComboBox<String> ComboBoxHorario;
+    private javax.swing.JLabel LabelNumeroAsientos;
+    private javax.swing.JLabel LabelSeleccionHorario;
+    private javax.swing.JTextField TextFieldNumeroAsientos;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

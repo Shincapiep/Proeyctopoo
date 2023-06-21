@@ -62,6 +62,11 @@ public class Pelicula {
     public void setDuracion(int Duracion) {
         this.Duracion = Duracion;
     }
+
+    @Override
+    public String toString() {
+        return "Pelicula{" + "Nombre_pelicula=" + Nombre_pelicula + ", Descripcion=" + Descripcion + ", Clasificacion=" + Clasificacion + ", Hora_proyeccion=" + Hora_proyeccion + ", Duracion=" + Duracion + '}';
+    }
     
     
 }
