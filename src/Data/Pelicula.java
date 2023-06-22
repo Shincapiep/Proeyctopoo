@@ -10,9 +10,10 @@ package Data;
  * @author LENOVO
  */
 public class Pelicula {
-    private String Nombre_pelicula,Descripcion,Clasificacion, Hora_proyeccion;
+
+    private String Nombre_pelicula, Descripcion, Clasificacion, Hora_proyeccion;
     private int Duracion;// en minutos
-    
+
     public Pelicula(String Nombre_pelicula, String Descripcion, String Clasificacion, String Hora_proyeccion, int Duracion) {
         this.Nombre_pelicula = Nombre_pelicula;
         this.Descripcion = Descripcion;
@@ -20,8 +21,6 @@ public class Pelicula {
         this.Hora_proyeccion = Hora_proyeccion;
         this.Duracion = Duracion;
     }
-    
-    
 
     public String getNombre_pelicula() {
         return Nombre_pelicula;
@@ -67,6 +66,5 @@ public class Pelicula {
     public String toString() {
         return "Pelicula{" + "Nombre_pelicula=" + Nombre_pelicula + ", Descripcion=" + Descripcion + ", Clasificacion=" + Clasificacion + ", Hora_proyeccion=" + Hora_proyeccion + ", Duracion=" + Duracion + '}';
     }
-    
-    
+
 }
