@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package GUI;
-
+import Data.*;
 /**
  *
  * @author LENOVO
@@ -102,11 +102,12 @@ public class admin_trabajador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       Trabajador Trabaja1 = new Trabajador("Juan gonzales","98635169","3504676261");
+       Trabaja1.ingresar_info_Trabajador();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+       //Trabaja1.
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

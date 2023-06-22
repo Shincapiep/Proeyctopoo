@@ -141,4 +141,61 @@ public class Cliente extends Persona {
             }
         }
     }
+    
+    public void Eliminar_cliente() {
+    String identificacion = JOptionPane.showInputDialog(null, "Digite la identificación del cliente que desea eliminar", "Eliminar cliente", JOptionPane.QUESTION_MESSAGE);
+
+    File archivo = new File("Cliente");
+    File archivoTemporal = new File("Cliente.tmp");
+    FileInputStream fis = null;
+    DataInputStream dis = null;
+    FileOutputStream fos = null;
+    DataOutputStream dos = null;
+
+    try {
+        fis = new FileInputStream(archivo);
+        dis = new DataInputStream(fis);
+        fos = new FileOutputStream(archivoTemporal);
+        dos = new DataOutputStream(fos);
+
+        while (fis.available() > 0) {
+            String nombre = dis.readUTF();
+            String identificacionActual = dis.readUTF();
+            String telefono = dis.readUTF();
+          
+
+            if (!identificacionActual.equals(identificacion)) {
+                dos.writeUTF(nombre);
+                dos.writeUTF(identificacionActual);
+                dos.writeUTF(telefono);
+                
+            }
+        }
+    } catch (FileNotFoundException e) {
+        System.out.println(e.getMessage());
+    } catch (IOException e) {
+        System.out.println(e.getMessage());
+    } finally {
+        try {
+            if (fis != null) {
+                fis.close();
+            }
+            if (dis != null) {
+                dis.close();
+            }
+            if (fos != null) {
+                fos.close();
+            }
+            if (dos != null) {
+                dos.close();
+            }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Renombrar el archivo temporal al nombre original
+    archivo.delete();
+    archivoTemporal.renameTo(archivo);
+}
 }
