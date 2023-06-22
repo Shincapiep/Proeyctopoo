@@ -1,10 +1,8 @@
-package IntentoEjecutable;
+package GUI;
 
 import java.sql.*;
 import Data.Conexion;
-import GUI.Admin;
 import javax.swing.JOptionPane;
-import GUI.numeroasientosyfecha;
 
 public class PaginaInicio extends javax.swing.JFrame {
 
