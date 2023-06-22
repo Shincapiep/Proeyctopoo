@@ -4,6 +4,7 @@ import java.sql.*;
 import Data.Conexion;
 import GUI.Admin;
 import javax.swing.JOptionPane;
+import GUI.numeroasientosyfecha;
 
 public class PaginaInicio extends javax.swing.JFrame {
 
@@ -129,7 +130,7 @@ public class PaginaInicio extends javax.swing.JFrame {
 
                     // se redirije al frame de usuario o administrador
                     if (Privilegio.equals("usuario")) {
-                        VentanaUsuario MiVentanita1 = new VentanaUsuario();
+                        numeroasientosyfecha MiVentanita1 = new numeroasientosyfecha();
                         MiVentanita1.setLocationRelativeTo(null);
                         MiVentanita1.setVisible(true);
                         this.setVisible(false);
