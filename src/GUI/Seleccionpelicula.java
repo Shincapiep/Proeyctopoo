@@ -4,12 +4,12 @@ package GUI;
  *
  * @author Santiago
  */
-public class numeroasientosyfecha extends javax.swing.JFrame {
+public class Seleccionpelicula extends javax.swing.JFrame {
 
     /**
      * Creates new form numeroasientosyfecha
      */
-    public numeroasientosyfecha() {
+    public Seleccionpelicula() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -97,19 +97,19 @@ public class numeroasientosyfecha extends javax.swing.JFrame {
 
     private void jButtonEstrategiaCaracolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstrategiaCaracolActionPerformed
         this.dispose();
-        Infomovie infomov =new Infomovie();
+        SelecMovieAsientos infomov =new SelecMovieAsientos();
         infomov.setVisible(true);
     }//GEN-LAST:event_jButtonEstrategiaCaracolActionPerformed
 
     private void jButtonAbrazoSerpienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrazoSerpienteActionPerformed
         this.dispose();
-        Infomovie infomov =new Infomovie();
+        SelecMovieAsientos infomov =new SelecMovieAsientos();
         infomov.setVisible(true);
     }//GEN-LAST:event_jButtonAbrazoSerpienteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        this.dispose();
-       Infomovie infomov =new Infomovie();
+       SelecMovieAsientos infomov =new SelecMovieAsientos();
        infomov.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -130,20 +130,21 @@ public class numeroasientosyfecha extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(numeroasientosyfecha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Seleccionpelicula.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(numeroasientosyfecha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Seleccionpelicula.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(numeroasientosyfecha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Seleccionpelicula.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(numeroasientosyfecha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Seleccionpelicula.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new numeroasientosyfecha().setVisible(true);
+                new Seleccionpelicula().setVisible(true);
             }
         });
     }

@@ -148,6 +148,8 @@ public class Sala_cine {
     public void horario(){
               
     }
+    
+    
 
 }
  //HOLA X2

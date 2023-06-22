@@ -128,7 +128,7 @@ public class PaginaInicio extends javax.swing.JFrame {
 
                     // se redirije al frame de usuario o administrador
                     if (Privilegio.equals("usuario")) {
-                        numeroasientosyfecha MiVentanita1 = new numeroasientosyfecha();
+                        Seleccionpelicula MiVentanita1 = new Seleccionpelicula();
                         MiVentanita1.setLocationRelativeTo(null);
                         MiVentanita1.setVisible(true);
                         this.setVisible(false);

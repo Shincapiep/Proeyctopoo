@@ -13,7 +13,7 @@ import GUI.*;
  */
 public class Cine {
 
-  numeroasientosyfecha num1 =new numeroasientosyfecha();
+  Seleccionpelicula num1 =new Seleccionpelicula();
   
     /**
      * @param args the command line arguments
