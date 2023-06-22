@@ -9,7 +9,7 @@ package GUI;
  *
  * @author LENOVO
  */
-public class Admin extends javax.swing.JInternalFrame {
+public class Admin extends javax.swing.JFrame {
 
     /**
      * Creates new form Admin
@@ -122,7 +122,7 @@ public class Admin extends javax.swing.JInternalFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
             this.dispose();
-            admin_trabajador trabajo = new admin_trabajador();
+            Admin_Trabajador trabajo = new Admin_Trabajador();
             trabajo.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
