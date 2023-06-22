@@ -8,6 +8,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
 
     public Admin_Cliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -24,7 +25,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jButtonBuscar = new javax.swing.JButton();
         jButtonMostrar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        volver = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario.png"))); // NOI18N
         jButtonAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -58,10 +59,10 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Administrar clientes.");
 
-        volver.setText("volver");
-        volver.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -73,19 +74,19 @@ public class Admin_Cliente extends javax.swing.JFrame {
                 .addContainerGap(59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(jButtonAgregar)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButtonEliminar)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButtonBuscar)
-                            .addGap(18, 18, 18)
-                            .addComponent(jButtonMostrar)
-                            .addGap(39, 39, 39))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(volver)
-                            .addGap(168, 168, 168)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButtonAgregar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonEliminar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonBuscar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonMostrar)
+                        .addGap(39, 39, 39))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(176, 176, 176)
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,9 +99,9 @@ public class Admin_Cliente extends javax.swing.JFrame {
                     .addComponent(jButtonBuscar)
                     .addComponent(jButtonEliminar)
                     .addComponent(jButtonAgregar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(volver)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
@@ -122,20 +123,19 @@ public class Admin_Cliente extends javax.swing.JFrame {
         Micliente.leer_cliente();
     }//GEN-LAST:event_jButtonMostrarActionPerformed
 
-    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
-        // TODO add your handling code here:
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.dispose();
         Admin admin= new Admin();
         admin.setVisible(true);
-    }//GEN-LAST:event_volverActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAgregar;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonEliminar;
     private javax.swing.JButton jButtonMostrar;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
