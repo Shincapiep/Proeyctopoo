@@ -6,12 +6,15 @@
 package Ejecutable;
 import Data.*;
 import javax.swing.JOptionPane;
+import GUI.*;
 /**
  *
  * @author LENOVO
  */
 public class Cine {
 
+  numeroasientosyfecha num1 =new numeroasientosyfecha();
+  
     /**
      * @param args the command line arguments
      */
