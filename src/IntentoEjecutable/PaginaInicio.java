@@ -26,8 +26,6 @@ public class PaginaInicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPasswordMIcontraseña = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
-        samuelito = new javax.swing.JLabel();
-        ticket = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(130, 180, 224));
@@ -52,45 +50,30 @@ public class PaginaInicio extends javax.swing.JFrame {
             }
         });
 
-        samuelito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/colombiana (2).png"))); // NOI18N
-
-        ticket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Iconos/cine (4).png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(samuelito)
-                        .addGap(18, 18, Short.MAX_VALUE)
-                        .addComponent(ticket))
+                        .addGap(79, 79, 79)
+                        .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addComponent(jButton1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(MiUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTexUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPasswordMIcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addComponent(MiUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTexUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPasswordMIcontraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(samuelito)
-                    .addComponent(ticket))
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addContainerGap(42, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MiUsuario)
                     .addComponent(jTexUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -127,19 +110,19 @@ public class PaginaInicio extends javax.swing.JFrame {
         String LaContraseñaes = jPasswordMIcontraseña.getText();
 
         //select Username, Password, Privilegios from Usuarios where activo=1 and Username='sofia';
-        String url = "select Username, Password, Privilegios "
-                + "from Usuarios where activo=1 and Username='" + Usuario + "'";
+        String url = "select Username, Password, Privilegio "
+                + "from UsuariosCine where activo=1 and Username='" + Usuario + "'";
 
         try {
-            Connection con = Conexion.ObtenerConeccion();
-            PreparedStatement ps = con.prepareStatement(url);
+            Connection conectar = Conexion.ObtenerConeccion();
+            PreparedStatement ps = conectar.prepareStatement(url);
             ResultSet rs = ps.executeQuery();
 
             if (rs.next()) {
                 //si existe el usuario
                 String User = rs.getString("Username");
                 String Password = rs.getString("Password");
-                String Privilegio = rs.getString("Privilegios");
+                String Privilegio = rs.getString("Privilegio");
 
                 if (LaContraseñaes.equals(Password)) {
 
@@ -150,7 +133,7 @@ public class PaginaInicio extends javax.swing.JFrame {
                         MiVentanita1.setVisible(true);
                         this.setVisible(false);
                         
-                    } else if (Privilegio.equals("administrador")) {
+                    } else if (Privilegio.equals("admin")) {
 
                         VentanaAdministrador MiVentanita2 = new VentanaAdministrador();
                         MiVentanita2.setLocationRelativeTo(null);
@@ -216,7 +199,5 @@ public class PaginaInicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordMIcontraseña;
     private javax.swing.JTextField jTexUsuarios;
-    private javax.swing.JLabel samuelito;
-    private javax.swing.JLabel ticket;
     // End of variables declaration//GEN-END:variables
 }
