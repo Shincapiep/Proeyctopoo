@@ -110,8 +110,8 @@ public class PaginaInicio extends javax.swing.JFrame {
         String LaContraseñaes = jPasswordMIcontraseña.getText();
 
         //select Username, Password, Privilegios from Usuarios where activo=1 and Username='sofia';
-        String url = "select Username, Password, Privilegio "
-                + "from UsuariosCine where activo=1 and Username='" + Usuario + "'";
+        String url = "select Username, Password, Privilegios "
+                + "from Usuarios where activo=1 and Username='" + Usuario + "'";
 
         try {
             Connection conectar = Conexion.ObtenerConeccion();
@@ -122,7 +122,7 @@ public class PaginaInicio extends javax.swing.JFrame {
                 //si existe el usuario
                 String User = rs.getString("Username");
                 String Password = rs.getString("Password");
-                String Privilegio = rs.getString("Privilegio");
+                String Privilegio = rs.getString("Privilegios");
 
                 if (LaContraseñaes.equals(Password)) {
 
@@ -133,7 +133,7 @@ public class PaginaInicio extends javax.swing.JFrame {
                         MiVentanita1.setVisible(true);
                         this.setVisible(false);
                         
-                    } else if (Privilegio.equals("admin")) {
+                    } else if (Privilegio.equals("administrador")) {
 
                         VentanaAdministrador MiVentanita2 = new VentanaAdministrador();
                         MiVentanita2.setLocationRelativeTo(null);
