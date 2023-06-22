@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -47,80 +47,78 @@
                       <Component id="jLabel4" min="-2" pref="254" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel1" min="-2" pref="351" max="-2" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Asiento2" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Component id="Asiento1" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Component id="Asiento6" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
                                       <Component id="Asiento11" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <Component id="Asiento13" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
-                                      <Component id="Asiento18" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
+                                      <Component id="Asiento16" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="Asiento8" min="-2" pref="44" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Asiento2" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Asiento3" min="-2" pref="44" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Asiento7" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="Asiento8" min="-2" pref="44" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="Asiento17" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="Asiento18" min="-2" pref="44" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" attributes="0">
                                           <Component id="Asiento12" min="-2" pref="44" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="Asiento13" min="-2" pref="44" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="Asiento1" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Asiento6" min="-2" pref="44" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="Asiento5" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Asiento10" min="-2" pref="44" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="Asiento14" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Asiento20" min="-2" pref="44" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="Asiento4" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="Asiento9" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="Asiento14" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="Asiento19" alignment="1" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="Asiento17" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Asiento19" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="Asiento20" min="-2" pref="44" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="Asiento3" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="Asiento4" min="-2" pref="44" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="Asiento7" min="-2" pref="44" max="-2" attributes="0"/>
-                                                      <Component id="Asiento15" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="Asiento9" min="-2" pref="44" max="-2" attributes="0"/>
-                                                      <Component id="Asiento16" min="-2" pref="44" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="Asiento5" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="Asiento10" min="-2" pref="44" max="-2" attributes="0"/>
+                                              <Component id="Asiento15" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                               </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" pref="351" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="26" pref="389" max="32767" attributes="0"/>
+                  <EmptySpace min="26" pref="442" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -134,57 +132,64 @@
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="Asiento4" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento3" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento2" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento1" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento6" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento2" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento3" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento5" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Asiento5" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento7" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento9" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento10" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento11" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento6" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento8" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="Asiento8" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento12" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento15" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento11" min="-2" pref="45" max="-2" attributes="0"/>
                       <Component id="Asiento13" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento16" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento14" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="Asiento15" min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="Asiento14" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento17" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento18" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento19" min="-2" pref="45" max="-2" attributes="0"/>
-                      <Component id="Asiento20" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="Asiento17" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="Asiento19" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="Asiento20" min="-2" pref="45" max="-2" attributes="0"/>
+                              <Component id="Asiento16" min="-2" pref="45" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="53" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Component id="Asiento18" min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace pref="53" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JToggleButton" name="Asiento1">
+        <Component class="javax.swing.JToggleButton" name="Asiento2">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Asiento1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Asiento2ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorAsientos()"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JToggleButton" name="Asiento2">
+        <Component class="javax.swing.JToggleButton" name="Asiento1">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Asiento2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Asiento1ActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorAsientos()"/>
@@ -247,9 +252,6 @@
           </AuxValues>
         </Component>
         <Component class="javax.swing.JToggleButton" name="Asiento10">
-          <Properties>
-            <Property name="selected" type="boolean" value="true"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Asiento10ActionPerformed"/>
           </Events>

@@ -11,14 +11,13 @@ public class Conexion {
         static String database="Cine";
         static String ip = "localhost";
         static String puerto = "1433";
-        static String cadena ="jdbc:sqlserver://"+ip+":"+puerto+"/"+database;*/
+        static String cadena ="jdbc:sqlserver://"+ip+":"+puerto;*/
 
     public static Connection ObtenerConeccion() {
         
        // Connection conectar=null;
         
        String url = "jdbc:sqlserver://localhost:1433;"
-               // + "database=Cine;"
                 + "user=usercine;"
                 + "password=cine123;"
                 + "database=Cine;"
