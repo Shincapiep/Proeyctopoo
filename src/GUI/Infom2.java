@@ -1,21 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GUI;
+
 import Data.*;
-/**
- *
- * @author LENOVO
- */
+
 public class Infom2 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Infom2
-     */
     public Infom2() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -28,23 +19,85 @@ public class Infom2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        LabelSeleccionHorario = new javax.swing.JLabel();
+        ComboBoxHorario = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        LabelNumeroAsientos = new javax.swing.JLabel();
+        TextFieldNumeroAsientos = new javax.swing.JTextField();
+        ButtonAtras = new javax.swing.JButton();
+        ButtonAtras1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/El abrazo de la serpiente.png"))); // NOI18N
 
-        jLabel2.setText("jLabel2");
+        LabelSeleccionHorario.setText("Seleccione el horario");
+
+        ComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxHorario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboBoxHorarioActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("\nDirector: Ciro Guerra.\nGénero: Aventuras y drama.\nEstreno: 15 mayo 2015.\nDuración: 125 minutos.\nSinopsis:\nKaramakate es un poderoso chamán de la Amazonia,\n último superviviente de su tribu, que vive en lo más\nprofundo de la selva en un aislamiento voluntario.\nDécadas de soledad lo han convertido en un despojo\nDécadas de soledad lo han convertido en un despojo\nexistencia se verá alterada por la llegada de Evan, un\netnobotánico en busca de una poderosa planta sagrada,\ncapaz de enseñar a soñar.");
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        LabelNumeroAsientos.setText("Cantidad entradas");
+
+        TextFieldNumeroAsientos.setText("1");
+        TextFieldNumeroAsientos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextFieldNumeroAsientosActionPerformed(evt);
+            }
+        });
+
+        ButtonAtras.setText("Atras");
+        ButtonAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtrasActionPerformed(evt);
+            }
+        });
+
+        ButtonAtras1.setText("Continuar");
+        ButtonAtras1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAtras1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(95, 95, 95)
-                .addComponent(jLabel2)
-                .addGap(0, 149, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LabelSeleccionHorario)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ButtonAtras))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(ButtonAtras1))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(7, 7, 7)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -52,15 +105,47 @@ public class Infom2 extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 334, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel2)))
-                .addContainerGap(66, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1))
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelSeleccionHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonAtras)
+                    .addComponent(ButtonAtras1))
+                .addGap(24, 24, 24))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxHorarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxHorarioActionPerformed
+
+    private void TextFieldNumeroAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldNumeroAsientosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldNumeroAsientosActionPerformed
+
+    private void ButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtrasActionPerformed
+        this.dispose();
+        numeroasientosyfecha cartelera2 = new numeroasientosyfecha();
+        cartelera2.setVisible(true);
+    }//GEN-LAST:event_ButtonAtrasActionPerformed
+
+    private void ButtonAtras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtras1ActionPerformed
+        this.dispose();
+        AsientosCine asientos = new AsientosCine();
+        asientos.setVisible(true);
+
+    }//GEN-LAST:event_ButtonAtras1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,9 +183,15 @@ public class Infom2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonAtras;
+    private javax.swing.JButton ButtonAtras1;
+    private javax.swing.JComboBox<String> ComboBoxHorario;
+    private javax.swing.JLabel LabelNumeroAsientos;
+    private javax.swing.JLabel LabelSeleccionHorario;
+    private javax.swing.JTextField TextFieldNumeroAsientos;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
-
 
 }
