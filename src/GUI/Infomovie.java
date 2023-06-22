@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
-/**
- *
- * @author LENOVO
- */
+import Data.*;
+
 public class Infomovie extends javax.swing.JFrame {
 
     /**
@@ -16,6 +10,7 @@ public class Infomovie extends javax.swing.JFrame {
      */
     public Infomovie() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -45,12 +40,12 @@ public class Infomovie extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jTextArea1.setText("\nDirector: Carlos César Arbeláezr.\nGénero: Drama.\nEstreno: 11 marzo 2011.\nDuración: 88 minutos.\nSinopsis:\nManuel, un niño de nueve años, que juega al fútbol\n todos los días en el campo con una vieja pelota,\nsueña con llegar a ser un gran guardameta.\nSu alegría es enorme cuando su padre, le regala un\nbalón nuevo; pero, desgraciadamente, un accidente\ninesperado hace que el balón caiga en un campo\nminado. A pesar del peligro que supone, Manuel,\nno está dispuesto a renunciar a su balón, convence\na sus dos mejores amigos,para que le ayuden a\nrecuperarlo. En medio de las aventuras y los juegos\ninfantiles. Los signos de un conflicto armado\nperturban la vida de los habitantes de La Pradera. ");
-        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextArea1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jScrollPane1.setViewportView(jTextArea1);
 
         LabelSeleccionHorario.setText("Seleccione el horario");
 
-        ComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboBoxHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "4:10 pm", "6:30 pm", "8:00 pm" }));
         ComboBoxHorario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComboBoxHorarioActionPerformed(evt);
@@ -138,13 +133,13 @@ public class Infomovie extends javax.swing.JFrame {
     }//GEN-LAST:event_TextFieldNumeroAsientosActionPerformed
 
     private void ComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxHorarioActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_ComboBoxHorarioActionPerformed
 
     private void ButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtrasActionPerformed
         this.dispose();
-        numeroasientosyfecha cartelera = new numeroasientosyfecha();
-        cartelera.setVisible(true);
+        numeroasientosyfecha cartelera1 = new numeroasientosyfecha();
+        cartelera1.setVisible(true);
     }//GEN-LAST:event_ButtonAtrasActionPerformed
 
     private void ButtonAtras1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtras1ActionPerformed
