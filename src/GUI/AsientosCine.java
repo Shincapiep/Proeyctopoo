@@ -395,8 +395,8 @@ public class AsientosCine extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.dispose();
-        Infomovie infomov =new Infomovie();
-        infomov.setVisible(true);
+        numeroasientosyfecha VolvemosAPeliculas =new numeroasientosyfecha();
+        VolvemosAPeliculas.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
