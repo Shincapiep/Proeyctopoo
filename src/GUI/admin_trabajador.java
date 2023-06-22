@@ -102,7 +102,6 @@ public class admin_trabajador extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
        Trabaja1.ingresar_info_Trabajador();
     }//GEN-LAST:event_jButton1ActionPerformed
 

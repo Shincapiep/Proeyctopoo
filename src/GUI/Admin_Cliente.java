@@ -94,8 +94,6 @@ public class Admin_Cliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
-        this.dispose();
-
         Micliente.ingresar_info_cliente();
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
