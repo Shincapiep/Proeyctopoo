@@ -15,8 +15,8 @@ public class Conexion {
 
         // Connection conectar=null;
         String url = "jdbc:sqlserver://localhost:1433;"
-                + "user=usercine;"
-                + "password=cine123;"
+                + "user=UsuarioProyecto;"
+                + "password=12345;"
                 + "database=Cine;"
                 + "encrypt=false;";
         try {
