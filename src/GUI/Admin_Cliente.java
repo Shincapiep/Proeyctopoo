@@ -31,9 +31,9 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jButtonBuscar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario (1)_1.png"))); // NOI18N
+        jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario.png"))); // NOI18N
 
-        jButtonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/eliminar-usuario.png"))); // NOI18N
+        jButtonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/basura (1).png"))); // NOI18N
 
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/evaluacion.png"))); // NOI18N
 

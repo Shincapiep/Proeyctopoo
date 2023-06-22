@@ -51,14 +51,14 @@
     <Component class="javax.swing.JButton" name="jButtonAgregar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/agregar-usuario (1)_1.png"/>
+          <Image iconType="3" name="/Imagenes/agregar-usuario.png"/>
         </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButtonEliminar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/eliminar-usuario.png"/>
+          <Image iconType="3" name="/Imagenes/basura (1).png"/>
         </Property>
       </Properties>
     </Component>

@@ -1,9 +1,10 @@
-package GUI;
+package IntentoEjecutable;
 
 import java.sql.*;
 import Data.Conexion;
+import GUI.Admin;
 import javax.swing.JOptionPane;
-import GUI.*;
+import GUI.numeroasientosyfecha;
 
 public class PaginaInicio extends javax.swing.JFrame {
 
@@ -111,8 +112,8 @@ public class PaginaInicio extends javax.swing.JFrame {
         String LaContraseñaes = jPasswordMIcontraseña.getText();
 
         //select Username, Password, Privilegios from Usuarios where activo=1 and Username='sofia';
-        String url = "select Username, Password, Privilegio "
-                + "from UsuariosCine where activo=1 and Username='" + Usuario + "'";
+        String url = "select Username, Password, Privilegios "
+                + "from Usuarios where activo=1 and Username='" + Usuario + "'";
 
         try {
             Connection conectar = Conexion.ObtenerConeccion();
@@ -123,7 +124,7 @@ public class PaginaInicio extends javax.swing.JFrame {
                 //si existe el usuario
                 String User = rs.getString("Username");
                 String Password = rs.getString("Password");
-                String Privilegio = rs.getString("Privilegio");
+                String Privilegio = rs.getString("Privilegios");
 
                 if (LaContraseñaes.equals(Password)) {
 
@@ -133,13 +134,14 @@ public class PaginaInicio extends javax.swing.JFrame {
                         MiVentanita1.setLocationRelativeTo(null);
                         MiVentanita1.setVisible(true);
                         this.setVisible(false);
+                        
+                    } else if (Privilegio.equals("administrador")) {
 
-                    } else if (Privilegio.equals("admin")) {
+                        Admin MiVentanita2 = new Admin();
+                        MiVentanita2.setLocationRelativeTo(null);
+                        MiVentanita2.setVisible(true);
+                        this.setVisible(false);
 
-                        //VentanaAdministrador MiVentanita2 = new VentanaAdministrador();
-                        // MiVentanita2.setLocationRelativeTo(null);
-                        //MiVentanita2.setVisible(true);
-                        // this.setVisible(false);
                     }
 
                 } else {
