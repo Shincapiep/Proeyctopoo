@@ -10,14 +10,14 @@ package Data;
  * @author LENOVO
  */
 public class Persona {
-       
+
     protected String Nombre, Identificacion, Telefono;
 
-    public Persona(String Nombre,String Identificacion, String Telefono) {
+    public Persona(String Nombre, String Identificacion, String Telefono) {
         this.Nombre = Nombre;
         this.Identificacion = Identificacion;
         this.Telefono = Telefono;
-        
+
     }
 
     public String getNombre() {
@@ -43,7 +43,5 @@ public class Persona {
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
-    
+
 }
-
-
