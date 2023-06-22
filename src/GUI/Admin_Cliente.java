@@ -8,6 +8,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
 
     public Admin_Cliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -24,6 +25,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jButtonBuscar = new javax.swing.JButton();
         jButtonMostrar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario.png"))); // NOI18N
         jButtonAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -57,14 +59,22 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Administrar clientes.");
 
+        jButton1.setText("volver");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(59, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonAgregar)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonEliminar)
@@ -72,30 +82,32 @@ public class Admin_Cliente extends javax.swing.JFrame {
                         .addComponent(jButtonBuscar)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonMostrar)
-                        .addGap(28, 28, 28))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(85, 85, 85))))
+                        .addGap(39, 39, 39))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(176, 176, 176)
+                .addComponent(jButton1)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonMostrar)
                     .addComponent(jButtonBuscar)
                     .addComponent(jButtonEliminar)
                     .addComponent(jButtonAgregar))
-                .addGap(24, 24, 24))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
-        this.dispose();
-
         Micliente.ingresar_info_cliente();
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
@@ -111,8 +123,15 @@ public class Admin_Cliente extends javax.swing.JFrame {
         Micliente.leer_cliente();
     }//GEN-LAST:event_jButtonMostrarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.dispose();
+        Admin admin= new Admin();
+        admin.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAgregar;
     private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonEliminar;
