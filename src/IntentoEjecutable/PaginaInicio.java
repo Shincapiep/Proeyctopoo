@@ -2,6 +2,7 @@ package IntentoEjecutable;
 
 import java.sql.*;
 import Data.Conexion;
+import GUI.Admin;
 import javax.swing.JOptionPane;
 
 public class PaginaInicio extends javax.swing.JFrame {
@@ -135,7 +136,7 @@ public class PaginaInicio extends javax.swing.JFrame {
                         
                     } else if (Privilegio.equals("administrador")) {
 
-                        VentanaAdministrador MiVentanita2 = new VentanaAdministrador();
+                        Admin MiVentanita2 = new Admin();
                         MiVentanita2.setLocationRelativeTo(null);
                         MiVentanita2.setVisible(true);
                         this.setVisible(false);
