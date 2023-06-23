@@ -13,13 +13,16 @@ import GUI.*;
  */
 public class Cine {
 
-  Seleccionpelicula num1 =new Seleccionpelicula();
+  //Seleccionpelicula num1 =new Seleccionpelicula();
   
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       Welcome Welc=new Welcome();
+       Welc.setVisible(true);
+        /*ue);
         Sala_cine salaCine = new Sala_cine();
 
         boolean cerrar = false;
@@ -59,6 +62,7 @@ public class Cine {
             }
         }
     }
-    }
+*/
+    }}
    
 
