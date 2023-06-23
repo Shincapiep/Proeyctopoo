@@ -111,7 +111,7 @@ public class PaginaInicio extends javax.swing.JFrame {
 
         //select Username, Password, Privilegios from Usuarios where activo=1 and Username='sofia';
         String url = "select Username, Password, Privilegios "
-                + "from UsuariosCine where activo=1 and Username='" + Usuario + "'";
+                + "from Usuarios where activo=1 and Username='" + Usuario + "'";
 
         try {
             Connection conectar = Conexion.ObtenerConeccion();
