@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package Data;
-
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.*;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -18,6 +20,7 @@ public class Sala_cine {
     private static final int CAPACIDAD_SALA = 20;
     private static final int PRECIO_ENTRADA = 10000;
     private int Asientos_ocupados;
+    private List<Integer> asientosOcupados;
     private List<Pelicula> Cartelera;
 
     public Sala_cine(int Asientos_ocupados, List<Pelicula> Cartelera) {
@@ -43,6 +46,7 @@ public class Sala_cine {
 
     public Sala_cine() {
         Cartelera = new ArrayList<>();
+        asientosOcupados = new ArrayList<>();
         Asientos_ocupados = 0;
         inicializarCartelera();
 
@@ -149,7 +153,23 @@ public class Sala_cine {
               
     }
     
+    public void guardarVenta(String peliculaSeleccionada, String horaSeleccionada, int cantidadEntradas, List<Integer> asientosSeleccionados) {
+        // Guardar los detalles de la venta en un archivo .dat
+        try {
+            ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("informacionpelis.dat"));
+            salida.writeObject(this);  // Guardar la instancia de la clase Sala_cine
+            salida.close();
+            JOptionPane.showMessageDialog(null, "La información de la venta ha sido guardada exitosamente.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al guardar la información de la venta.");
+            e.printStackTrace();
+        }
+    }
     
+    public void ocuparAsientos(List<Integer> asientosSeleccionados) {
+        asientosOcupados.addAll(asientosSeleccionados);
+    }
+
 
 }
  //HOLA X2

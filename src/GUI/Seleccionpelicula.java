@@ -9,10 +9,15 @@ public class Seleccionpelicula extends javax.swing.JFrame {
     /**
      * Creates new form numeroasientosyfecha
      */
+    private String nombrePeliculaSeleccionada;
     public Seleccionpelicula() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
+public String getNombrePeliculaSeleccionada() {
+    return nombrePeliculaSeleccionada;
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,7 +32,7 @@ public class Seleccionpelicula extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonEstrategiaCaracol = new javax.swing.JButton();
         jButtonAbrazoSerpiente = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        ButtonPelicula1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -51,11 +56,11 @@ public class Seleccionpelicula extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png"))); // NOI18N
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonPelicula1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png"))); // NOI18N
+        ButtonPelicula1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        ButtonPelicula1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonPelicula1ActionPerformed(evt);
             }
         });
 
@@ -74,7 +79,7 @@ public class Seleccionpelicula extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jButton1)
+                        .addComponent(ButtonPelicula1)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonAbrazoSerpiente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -105,7 +110,7 @@ public class Seleccionpelicula extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonEstrategiaCaracol)
                     .addComponent(jButtonAbrazoSerpiente)
-                    .addComponent(jButton1))
+                    .addComponent(ButtonPelicula1))
                 .addGap(15, 15, 15))
         );
 
@@ -128,21 +133,24 @@ public class Seleccionpelicula extends javax.swing.JFrame {
 
     private void jButtonEstrategiaCaracolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstrategiaCaracolActionPerformed
         this.dispose();
+        nombrePeliculaSeleccionada = "La estrategia caracol";
         SelecMovieAsientos infomov =new SelecMovieAsientos();
         infomov.setVisible(true);
     }//GEN-LAST:event_jButtonEstrategiaCaracolActionPerformed
 
     private void jButtonAbrazoSerpienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrazoSerpienteActionPerformed
         this.dispose();
+        nombrePeliculaSeleccionada = "El abrazo de la serpiente";
         SelecMovieAsientos infomov =new SelecMovieAsientos();
         infomov.setVisible(true);
     }//GEN-LAST:event_jButtonAbrazoSerpienteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonPelicula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPelicula1ActionPerformed
        this.dispose();
+       nombrePeliculaSeleccionada = "Los colores de la montaña";
        SelecMovieAsientos infomov =new SelecMovieAsientos();
        infomov.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonPelicula1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,7 +189,7 @@ public class Seleccionpelicula extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ButtonPelicula1;
     private javax.swing.JButton jButtonAbrazoSerpiente;
     private javax.swing.JButton jButtonEstrategiaCaracol;
     private javax.swing.JLabel jLabel1;

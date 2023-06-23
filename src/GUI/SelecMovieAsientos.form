@@ -37,20 +37,20 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="TextFieldNumeroAsientos" min="-2" pref="38" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="LabelIconCinema" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="ButtonAtras" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="240" max="-2" attributes="0"/>
+                      <Component id="LabelPeliculaimg" min="-2" pref="240" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="281" max="-2" attributes="0"/>
+                      <Component id="ScrollPaneDescripcion" min="-2" pref="281" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jPanel1" pref="462" max="32767" attributes="0"/>
+              <Component id="PanelAsientos" pref="462" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -60,11 +60,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jPanel1" max="32767" attributes="0"/>
+                  <Component id="PanelAsientos" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" alignment="0" min="-2" pref="373" max="-2" attributes="0"/>
+                          <Component id="LabelPeliculaimg" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
+                          <Component id="ScrollPaneDescripcion" alignment="0" min="-2" pref="373" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -78,7 +78,7 @@
                               <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel5" min="-2" pref="47" max="-2" attributes="0"/>
+                              <Component id="LabelIconCinema" min="-2" pref="47" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -92,7 +92,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
+    <Component class="javax.swing.JLabel" name="LabelPeliculaimg">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Imagenes/Los Colores de la Monta&#xf1;a (1) (1).png"/>
@@ -100,14 +100,14 @@
         <Property name="text" type="java.lang.String" value="Imagen"/>
       </Properties>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="ScrollPaneDescripcion">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="TextAreaDescripci&#xf3;n">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -115,7 +115,7 @@
               <Connection code="&quot;\nDirector: Carlos C&#xe9;sar Arbel&#xe1;ezr.\nG&#xe9;nero: Drama.\nEstreno: 11 marzo 2011.\nDuraci&#xf3;n: 88 minutos.\nSinopsis:\nManuel, un ni&#xf1;o de nueve a&#xf1;os, que juega al f&#xfa;tbol\n todos los d&#xed;as en el campo con una vieja pelota,\nsue&#xf1;a con llegar a ser un gran guardameta.\nSu alegr&#xed;a es enorme cuando su padre, le regala un\nbal&#xf3;n nuevo; pero, desgraciadamente, un accidente\ninesperado hace que el bal&#xf3;n caiga en un campo\nminado. A pesar del peligro que supone, Manuel,\nno est&#xe1; dispuesto a renunciar a su bal&#xf3;n, convence\na sus dos mejores amigos,para que le ayuden a\nrecuperarlo. En medio de las aventuras y los juegos\ninfantiles. Los signos de un conflicto armado\nperturban la vida de los habitantes de La Pradera. &quot;" type="code"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Default Cursor"/>
+              <Color id="Cursor Por defecto"/>
             </Property>
           </Properties>
         </Component>
@@ -174,7 +174,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonAtrasActionPerformed"/>
       </Events>
     </Component>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="PanelAsientos">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -232,12 +232,12 @@
                                       <Component id="Asiento15" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="jLabel4" min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="Labelseleccioneasientos" min="-2" pref="254" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Labelimagen" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="ButtonContinuar" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -246,7 +246,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="351" max="-2" attributes="0"/>
+                  <Component id="LabelPantalla" min="-2" pref="351" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -254,9 +254,9 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="Labelseleccioneasientos" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Component id="LabelPantalla" min="-2" pref="28" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="Asiento4" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
@@ -292,7 +292,7 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="ButtonContinuar" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="Labelimagen" min="-2" pref="76" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -460,7 +460,7 @@
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new ColorAsientos()"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="LabelPantalla">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gadugi" size="12" style="1"/>
@@ -468,7 +468,7 @@
             <Property name="text" type="java.lang.String" value="------------------------------Pantalla------------------------------"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="Labelseleccioneasientos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dubai" size="14" style="0"/>
@@ -487,16 +487,16 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ButtonContinuarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="Labelimagen">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Imagenes/asiento-de-cine.png"/>
+              <Image iconType="3" name="/Imagenes/camara.png"/>
             </Property>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel5">
+    <Component class="javax.swing.JLabel" name="LabelIconCinema">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Imagenes/entrada-de-cine.png"/>
