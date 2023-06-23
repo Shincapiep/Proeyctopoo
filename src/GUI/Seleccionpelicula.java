@@ -132,22 +132,21 @@ public String getNombrePeliculaSeleccionada() {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEstrategiaCaracolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstrategiaCaracolActionPerformed
-        this.dispose();
-        nombrePeliculaSeleccionada = "La estrategia caracol";
-        SelecMovieAsientos infomov =new SelecMovieAsientos();
-        infomov.setVisible(true);
+         this.dispose();       
+        SelecAsientosCaracol infomov1 =new SelecAsientosCaracol();
+        infomov1.setVisible(true);
     }//GEN-LAST:event_jButtonEstrategiaCaracolActionPerformed
 
     private void jButtonAbrazoSerpienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAbrazoSerpienteActionPerformed
-        this.dispose();
-        nombrePeliculaSeleccionada = "El abrazo de la serpiente";
-        SelecMovieAsientos infomov =new SelecMovieAsientos();
-        infomov.setVisible(true);
+        
+        this.dispose();      
+        SelecAsientosSerpiente infomov2 =new SelecAsientosSerpiente();
+        infomov2.setVisible(true);
     }//GEN-LAST:event_jButtonAbrazoSerpienteActionPerformed
 
     private void ButtonPelicula1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonPelicula1ActionPerformed
-       this.dispose();
-       nombrePeliculaSeleccionada = "Los colores de la montaña";
+   
+        this.dispose();
        SelecMovieAsientos infomov =new SelecMovieAsientos();
        infomov.setVisible(true);
     }//GEN-LAST:event_ButtonPelicula1ActionPerformed

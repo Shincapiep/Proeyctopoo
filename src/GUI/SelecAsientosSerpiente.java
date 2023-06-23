@@ -1,24 +1,25 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ */
 package GUI;
-import Data.*;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-import javax.swing.JOptionPane;
-import java.util.List;
 import Data.RegistroVenta;
-import java.util.ArrayList;
-import javax.swing.ImageIcon;
-import javax.swing.JToggleButton;
-import GUI.Seleccionpelicula;
-public class SelecMovieAsientos extends javax.swing.JFrame {
-   Seleccionpelicula Selec =new Seleccionpelicula();
-   
-          
-    private List<JToggleButton> listaToggleButtons;
-    public SelecMovieAsientos() {
+import Data.Sala_cine;
+import java.io.FileOutputStream;
+import javax.swing.*;
+import java.io.*;
+import java.util.List;
+/**
+ *
+ * @author Juan Diego Rubiano
+ */
+public class SelecAsientosSerpiente extends javax.swing.JFrame {
+
+    /**
+     * Creates new form SelecAsientosSerpiente
+     */
+    public SelecAsientosSerpiente() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -65,10 +66,7 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         Labelimagen = new javax.swing.JLabel();
         LabelIconCinema = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png"))); // NOI18N
-        LabelPeliculaimg.setText("Imagen");
+        LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/El abrazo de la serpiente.png"))); // NOI18N
         LabelPeliculaimg.addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
                 LabelPeliculaimgComponentAdded(evt);
@@ -77,7 +75,7 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
 
         TextAreaDescripción.setColumns(20);
         TextAreaDescripción.setRows(5);
-        TextAreaDescripción.setText("\nDirector: Carlos César Arbeláezr.\nGénero: Drama.\nEstreno: 11 marzo 2011.\nDuración: 88 minutos.\nSinopsis:\nManuel, un niño de nueve años, que juega al fútbol\n todos los días en el campo con una vieja pelota,\nsueña con llegar a ser un gran guardameta.\nSu alegría es enorme cuando su padre, le regala un\nbalón nuevo; pero, desgraciadamente, un accidente\ninesperado hace que el balón caiga en un campo\nminado. A pesar del peligro que supone, Manuel,\nno está dispuesto a renunciar a su balón, convence\na sus dos mejores amigos,para que le ayuden a\nrecuperarlo. En medio de las aventuras y los juegos\ninfantiles. Los signos de un conflicto armado\nperturban la vida de los habitantes de La Pradera. ");
+        TextAreaDescripción.setText("\nDirector: Ciro Guerra.\nGénero: Drama y Aventura.\nEstreno: 25 mayo 2015.\nDuración: 125 minutos.\nSinopsis:\nKaramakate es un poderoso chamán de la Amazonia,\n último superviviente de su tribu, que vive en lo más\n profundo de la selva en un aislamiento voluntario.\n Décadas de soledad lo han convertido en un despojo\n humano, desprovisto de recuerdos y emociones.\n Su vacía existencia se verá alterada por la llegada \nde Evan, un etnobotánico en busca de una poderosa \nplanta sagrada, capaz de enseñar a soñar.");
         TextAreaDescripción.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ScrollPaneDescripcion.setViewportView(TextAreaDescripción);
 
@@ -92,7 +90,7 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         });
         ComboBoxHorario.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                Hora_proyeccion(evt);
+                ComboBoxHorarioHora_proyeccion(evt);
             }
         });
 
@@ -357,27 +355,25 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(LabelSeleccionHorario)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(38, 38, 38)
+                            .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(LabelIconCinema))
+                        .addComponent(ButtonAtras))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(LabelSeleccionHorario)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(ComboBoxHorario, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(LabelNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TextFieldNumeroAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LabelIconCinema))
-                            .addComponent(ButtonAtras)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(LabelPeliculaimg, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(LabelPeliculaimg)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ScrollPaneDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
+                        .addComponent(ScrollPaneDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addComponent(PanelAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 462, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -388,10 +384,11 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PanelAsientos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LabelPeliculaimg, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ScrollPaneDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 373, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(7, 7, 7)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(LabelPeliculaimg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ScrollPaneDescripcion))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -411,87 +408,34 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TextFieldNumeroAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldNumeroAsientosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldNumeroAsientosActionPerformed
+    private void LabelPeliculaimgComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_LabelPeliculaimgComponentAdded
+
+    }//GEN-LAST:event_LabelPeliculaimgComponentAdded
 
     private void ComboBoxHorarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBoxHorarioActionPerformed
 
     }//GEN-LAST:event_ComboBoxHorarioActionPerformed
+
+    private void ComboBoxHorarioHora_proyeccion(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ComboBoxHorarioHora_proyeccion
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboBoxHorarioHora_proyeccion
+
+    private void TextFieldNumeroAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldNumeroAsientosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldNumeroAsientosActionPerformed
 
     private void ButtonAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAtrasActionPerformed
         this.dispose();
         Seleccionpelicula cartelera1 = new Seleccionpelicula();
         cartelera1.setVisible(true);
     }//GEN-LAST:event_ButtonAtrasActionPerformed
-    public void inicializarToggleButtons() {
-    listaToggleButtons = new ArrayList<>();
-    listaToggleButtons.add(Asiento1);
-    listaToggleButtons.add(Asiento2);
-    listaToggleButtons.add(Asiento3);
-    listaToggleButtons.add(Asiento4);
-    listaToggleButtons.add(Asiento5);
-    listaToggleButtons.add(Asiento6);
-    listaToggleButtons.add(Asiento7);
-    listaToggleButtons.add(Asiento8);
-    listaToggleButtons.add(Asiento9);
-    listaToggleButtons.add(Asiento10);
-    listaToggleButtons.add(Asiento11);
-    listaToggleButtons.add(Asiento12);
-    listaToggleButtons.add(Asiento13);
-    listaToggleButtons.add(Asiento14);
-    listaToggleButtons.add(Asiento15);
-    listaToggleButtons.add(Asiento16);
-    listaToggleButtons.add(Asiento17);
-    listaToggleButtons.add(Asiento18);
-    listaToggleButtons.add(Asiento19);
-    listaToggleButtons.add(Asiento20);  
-    }
-    private void ButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonContinuarActionPerformed
-
-        // Obtener los valores seleccionados por el usuario
-    Seleccionpelicula seleccionPelicula = new Seleccionpelicula();    
-    String nombrePeliculaSeleccionada = seleccionPelicula.getNombrePeliculaSeleccionada();
-    String horaSeleccionada = ComboBoxHorario.getSelectedItem().toString();
-    int cantidadEntradas = Integer.parseInt(TextFieldNumeroAsientos.getText());
-
-    // Crear un objeto de tipo RegistroVenta con los valores seleccionados
-    RegistroVenta registroVenta = new RegistroVenta(nombrePeliculaSeleccionada, horaSeleccionada, cantidadEntradas);
-
-    
-    // Establecer el ícono del LabelPeliculaimg
-    LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png")));
-
-    // Guardar el objeto RegistroVenta en un archivo .dat
-    try {
-        ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("informacionpelis.dat"));
-        salida.writeObject(registroVenta);
-        salida.close();
-        JOptionPane.showMessageDialog(this, "La información ha sido guardada exitosamente.");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Error al guardar la información.");
-        e.printStackTrace();
-    }
-
-    // Obtener los asientos seleccionados desde los ToggleButtons
-    List<Integer> asientosSeleccionados = obtenerAsientosSeleccionados();
-
-    // Crear una instancia de Sala_cine y ocupar los asientos seleccionados
-    Sala_cine salaCine = new Sala_cine();
-    salaCine.ocuparAsientos(asientosSeleccionados);
-    }//GEN-LAST:event_ButtonContinuarActionPerformed
-    
-    
-    private void Hora_proyeccion(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Hora_proyeccion
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Hora_proyeccion
 
     private void Asiento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asiento2ActionPerformed
 
     }//GEN-LAST:event_Asiento2ActionPerformed
 
     private void Asiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asiento1ActionPerformed
-       
+
     }//GEN-LAST:event_Asiento1ActionPerformed
 
     private void Asiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asiento3ActionPerformed
@@ -566,56 +510,40 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Asiento20ActionPerformed
 
-    private void LabelPeliculaimgComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_LabelPeliculaimgComponentAdded
+    private void ButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonContinuarActionPerformed
 
-    }//GEN-LAST:event_LabelPeliculaimgComponentAdded
-    
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-       
+        // Obtener los valores seleccionados por el usuario
+        Seleccionpelicula seleccionPelicula = new Seleccionpelicula();
+        String nombrePeliculaSeleccionada = seleccionPelicula.getNombrePeliculaSeleccionada();
+        String horaSeleccionada = ComboBoxHorario.getSelectedItem().toString();
+        int cantidadEntradas = Integer.parseInt(TextFieldNumeroAsientos.getText());
+
+        // Crear un objeto de tipo RegistroVenta con los valores seleccionados
+        RegistroVenta registroVenta = new RegistroVenta(nombrePeliculaSeleccionada, horaSeleccionada, cantidadEntradas);
+
+        // Establecer el ícono del LabelPeliculaimg
+        LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png")));
+
+        // Guardar el objeto RegistroVenta en un archivo .dat
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SelecMovieAsientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SelecMovieAsientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SelecMovieAsientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SelecMovieAsientos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("informacionpelis.dat"));
+            salida.writeObject(registroVenta);
+            salida.close();
+            JOptionPane.showMessageDialog(this, "La información ha sido guardada exitosamente.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al guardar la información.");
+            e.printStackTrace();
         }
-        //</editor-fold>
-        //</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SelecMovieAsientos().setVisible(true);
-            }
-        });
-    }
-    
-    private List<Integer> obtenerAsientosSeleccionados() {
-    List<Integer> asientosSeleccionados = new ArrayList<>();
+        // Obtener los asientos seleccionados desde los ToggleButtons
+        //List<Integer> asientosSeleccionados = obtenerAsientosSeleccionados();
 
-    // Iterar sobre los ToggleButtons para obtener los asientos seleccionados
-    for (JToggleButton toggleButton : listaToggleButtons) {
-        if (toggleButton.isSelected()) {
-            // Obtener el número de asiento y agregarlo a la lista de asientos seleccionados
-            int numeroAsiento = Integer.parseInt(toggleButton.getText());
-            asientosSeleccionados.add(numeroAsiento);
-        }
-    }
+        // Crear una instancia de Sala_cine y ocupar los asientos seleccionados
+        //Sala_cine salaCine = new Sala_cine();
+        //salaCine.ocuparAsientos(asientosSeleccionados);
+    }//GEN-LAST:event_ButtonContinuarActionPerformed
 
-    return asientosSeleccionados;
-}
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Asiento1;
     private javax.swing.JToggleButton Asiento10;

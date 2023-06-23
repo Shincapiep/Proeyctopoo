@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
-  </Properties>
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -23,33 +19,30 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="LabelSeleccionHorario" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="ComboBoxHorario" min="-2" pref="93" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                              <Component id="LabelNumeroAsientos" min="-2" pref="120" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="TextFieldNumeroAsientos" min="-2" pref="38" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LabelIconCinema" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="ButtonAtras" alignment="0" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="LabelSeleccionHorario" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="ComboBoxHorario" min="-2" pref="93" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                          <Component id="LabelNumeroAsientos" min="-2" pref="120" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="TextFieldNumeroAsientos" min="-2" pref="38" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="LabelIconCinema" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="ButtonAtras" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="LabelPeliculaimg" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="LabelPeliculaimg" min="-2" pref="240" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ScrollPaneDescripcion" min="-2" pref="295" max="-2" attributes="0"/>
+                      <Component id="ScrollPaneDescripcion" min="-2" pref="304" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="PanelAsientos" pref="462" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -60,15 +53,16 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="PanelAsientos" max="32767" attributes="0"/>
+                  <Component id="PanelAsientos" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="LabelPeliculaimg" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
-                          <Component id="ScrollPaneDescripcion" alignment="0" min="-2" pref="373" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="LabelPeliculaimg" max="32767" attributes="0"/>
+                          <Component id="ScrollPaneDescripcion" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="LabelSeleccionHorario" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                                   <Component id="ComboBoxHorario" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -95,9 +89,8 @@
     <Component class="javax.swing.JLabel" name="LabelPeliculaimg">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagenes/Los Colores de la Monta&#xf1;a (1) (1).png"/>
+          <Image iconType="3" name="/Imagenes/El abrazo de la serpiente.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Imagen"/>
       </Properties>
       <Events>
         <EventHandler event="componentAdded" listener="java.awt.event.ContainerListener" parameters="java.awt.event.ContainerEvent" handler="LabelPeliculaimgComponentAdded"/>
@@ -115,7 +108,7 @@
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;\nDirector: Carlos C&#xe9;sar Arbel&#xe1;ezr.\nG&#xe9;nero: Drama.\nEstreno: 11 marzo 2011.\nDuraci&#xf3;n: 88 minutos.\nSinopsis:\nManuel, un ni&#xf1;o de nueve a&#xf1;os, que juega al f&#xfa;tbol\n todos los d&#xed;as en el campo con una vieja pelota,\nsue&#xf1;a con llegar a ser un gran guardameta.\nSu alegr&#xed;a es enorme cuando su padre, le regala un\nbal&#xf3;n nuevo; pero, desgraciadamente, un accidente\ninesperado hace que el bal&#xf3;n caiga en un campo\nminado. A pesar del peligro que supone, Manuel,\nno est&#xe1; dispuesto a renunciar a su bal&#xf3;n, convence\na sus dos mejores amigos,para que le ayuden a\nrecuperarlo. En medio de las aventuras y los juegos\ninfantiles. Los signos de un conflicto armado\nperturban la vida de los habitantes de La Pradera. &quot;" type="code"/>
+              <Connection code="&quot;\nDirector: Ciro Guerra.\nG&#xe9;nero: Drama y Aventura.\nEstreno: 25 mayo 2015.\nDuraci&#xf3;n: 125 minutos.\nSinopsis:\nKaramakate es un poderoso cham&#xe1;n de la Amazonia,\n &#xfa;ltimo superviviente de su tribu, que vive en lo m&#xe1;s\n profundo de la selva en un aislamiento voluntario.\n D&#xe9;cadas de soledad lo han convertido en un despojo\n humano, desprovisto de recuerdos y emociones.\n Su vac&#xed;a existencia se ver&#xe1; alterada por la llegada \nde Evan, un etnobot&#xe1;nico en busca de una poderosa \nplanta sagrada, capaz de ense&#xf1;ar a so&#xf1;ar.&quot;" type="code"/>
             </Property>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Default Cursor"/>
@@ -144,7 +137,7 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ComboBoxHorarioActionPerformed"/>
-        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Hora_proyeccion"/>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="ComboBoxHorarioHora_proyeccion"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -235,7 +228,7 @@
                                       <Component id="Asiento15" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Component id="Labelseleccioneasientos" min="-2" pref="254" max="-2" attributes="0"/>
+                              <Component id="Labelseleccioneasientos" alignment="0" min="-2" pref="254" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -294,8 +287,8 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="ButtonContinuar" min="-2" max="-2" attributes="0"/>
-                      <Component id="Labelimagen" min="-2" pref="76" max="-2" attributes="0"/>
+                      <Component id="ButtonContinuar" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Labelimagen" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
