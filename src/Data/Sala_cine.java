@@ -43,7 +43,10 @@ public class Sala_cine {
     public void setCartelera(List<Pelicula> Cartelera) {
         this.Cartelera = Cartelera;
     }
-
+    public  List <Integer> getAsientosOcupados(){
+    return asientosOcupados;
+    }
+    
     public Sala_cine() {
         Cartelera = new ArrayList<>();
         asientosOcupados = new ArrayList<>();
@@ -51,6 +54,7 @@ public class Sala_cine {
         inicializarCartelera();
 
     }
+    
 
     private void inicializarCartelera() {
         Cartelera.add(new Pelicula("Los colores de la montaña", "Descripción de Los colores de la montaña", "Clasificación de Los colores de la montaña", "14:00", 120));

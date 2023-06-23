@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package GUI;
+
 import Data.RegistroVenta;
 import Data.Sala_cine;
 import java.io.FileOutputStream;
 import javax.swing.*;
 import java.io.*;
 import java.util.List;
+
 /**
  *
  * @author Juan Diego Rubiano
@@ -20,6 +22,8 @@ public class SelecAsientosSerpiente extends javax.swing.JFrame {
      */
     public SelecAsientosSerpiente() {
         initComponents();
+        this.setLocationRelativeTo(null);
+
     }
 
     /**
@@ -537,7 +541,6 @@ public class SelecAsientosSerpiente extends javax.swing.JFrame {
 
         // Obtener los asientos seleccionados desde los ToggleButtons
         //List<Integer> asientosSeleccionados = obtenerAsientosSeleccionados();
-
         // Crear una instancia de Sala_cine y ocupar los asientos seleccionados
         //Sala_cine salaCine = new Sala_cine();
         //salaCine.ocuparAsientos(asientosSeleccionados);

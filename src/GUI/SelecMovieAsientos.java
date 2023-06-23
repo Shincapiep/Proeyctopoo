@@ -1,5 +1,5 @@
-
 package GUI;
+
 import Data.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,14 +11,22 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JToggleButton;
 import GUI.Seleccionpelicula;
+import java.util.HashSet;
+import java.util.Set;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
 public class SelecMovieAsientos extends javax.swing.JFrame {
-   Seleccionpelicula Selec =new Seleccionpelicula();
-   
-          
+
+    Seleccionpelicula Selec = new Seleccionpelicula();
+
     private List<JToggleButton> listaToggleButtons;
+    private Set<Integer> asientosOcupados;
+
     public SelecMovieAsientos() {
         initComponents();
         this.setLocationRelativeTo(null);
+        cargarAsientosOcupados();
     }
 
     /**
@@ -425,63 +433,67 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
         cartelera1.setVisible(true);
     }//GEN-LAST:event_ButtonAtrasActionPerformed
     public void inicializarToggleButtons() {
-    listaToggleButtons = new ArrayList<>();
-    listaToggleButtons.add(Asiento1);
-    listaToggleButtons.add(Asiento2);
-    listaToggleButtons.add(Asiento3);
-    listaToggleButtons.add(Asiento4);
-    listaToggleButtons.add(Asiento5);
-    listaToggleButtons.add(Asiento6);
-    listaToggleButtons.add(Asiento7);
-    listaToggleButtons.add(Asiento8);
-    listaToggleButtons.add(Asiento9);
-    listaToggleButtons.add(Asiento10);
-    listaToggleButtons.add(Asiento11);
-    listaToggleButtons.add(Asiento12);
-    listaToggleButtons.add(Asiento13);
-    listaToggleButtons.add(Asiento14);
-    listaToggleButtons.add(Asiento15);
-    listaToggleButtons.add(Asiento16);
-    listaToggleButtons.add(Asiento17);
-    listaToggleButtons.add(Asiento18);
-    listaToggleButtons.add(Asiento19);
-    listaToggleButtons.add(Asiento20);  
+        listaToggleButtons = new ArrayList<>();
+        listaToggleButtons.add(Asiento1);
+        listaToggleButtons.add(Asiento2);
+        listaToggleButtons.add(Asiento3);
+        listaToggleButtons.add(Asiento4);
+        listaToggleButtons.add(Asiento5);
+        listaToggleButtons.add(Asiento6);
+        listaToggleButtons.add(Asiento7);
+        listaToggleButtons.add(Asiento8);
+        listaToggleButtons.add(Asiento9);
+        listaToggleButtons.add(Asiento10);
+        listaToggleButtons.add(Asiento11);
+        listaToggleButtons.add(Asiento12);
+        listaToggleButtons.add(Asiento13);
+        listaToggleButtons.add(Asiento14);
+        listaToggleButtons.add(Asiento15);
+        listaToggleButtons.add(Asiento16);
+        listaToggleButtons.add(Asiento17);
+        listaToggleButtons.add(Asiento18);
+        listaToggleButtons.add(Asiento19);
+        listaToggleButtons.add(Asiento20);
     }
     private void ButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonContinuarActionPerformed
 
         // Obtener los valores seleccionados por el usuario
-    Seleccionpelicula seleccionPelicula = new Seleccionpelicula();    
-    String nombrePeliculaSeleccionada = seleccionPelicula.getNombrePeliculaSeleccionada();
-    String horaSeleccionada = ComboBoxHorario.getSelectedItem().toString();
-    int cantidadEntradas = Integer.parseInt(TextFieldNumeroAsientos.getText());
+        Seleccionpelicula seleccionPelicula = new Seleccionpelicula();
+        String nombrePeliculaSeleccionada = seleccionPelicula.getNombrePeliculaSeleccionada();
+        String horaSeleccionada = ComboBoxHorario.getSelectedItem().toString();
+        int cantidadEntradas = Integer.parseInt(TextFieldNumeroAsientos.getText());
 
-    // Crear un objeto de tipo RegistroVenta con los valores seleccionados
-    RegistroVenta registroVenta = new RegistroVenta(nombrePeliculaSeleccionada, horaSeleccionada, cantidadEntradas);
+        // Crear un objeto de tipo RegistroVenta con los valores seleccionados
+        RegistroVenta registroVenta = new RegistroVenta(nombrePeliculaSeleccionada, horaSeleccionada, cantidadEntradas);
 
-    
-    // Establecer el ícono del LabelPeliculaimg
-    LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png")));
+        // Establecer el ícono del LabelPeliculaimg
+        LabelPeliculaimg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Los Colores de la Montaña (1) (1).png")));
 
-    // Guardar el objeto RegistroVenta en un archivo .dat
-    try {
-        ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("informacionpelis.dat"));
-        salida.writeObject(registroVenta);
-        salida.close();
-        JOptionPane.showMessageDialog(this, "La información ha sido guardada exitosamente.");
-    } catch (IOException e) {
-        JOptionPane.showMessageDialog(this, "Error al guardar la información.");
-        e.printStackTrace();
-    }
+        // Guardar el objeto RegistroVenta en un archivo .dat
+        try {
+            ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("informacionpelis.dat"));
+            salida.writeObject(registroVenta);
+            salida.close();
+            JOptionPane.showMessageDialog(this, "La información ha sido guardada exitosamente.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al guardar la información.");
+            e.printStackTrace();
+        }
 
-    // Obtener los asientos seleccionados desde los ToggleButtons
-    List<Integer> asientosSeleccionados = obtenerAsientosSeleccionados();
+        // Obtener los asientos seleccionados desde los ToggleButtons
+        List<Integer> asientosSeleccionados = obtenerAsientosSeleccionados();
 
-    // Crear una instancia de Sala_cine y ocupar los asientos seleccionados
-    Sala_cine salaCine = new Sala_cine();
-    salaCine.ocuparAsientos(asientosSeleccionados);
+        // Crear una instancia de Sala_cine y ocupar los asientos seleccionados
+        Sala_cine salaCine = new Sala_cine();
+        salaCine.ocuparAsientos(asientosSeleccionados);
+        // Obtener los asientos ocupados desde la instancia de Sala_cine
+        List<Integer> asientosOcupados = salaCine.getAsientosOcupados();
+
+        // Inicializar los ToggleButtons con la lista de asientos ocupados
+        inicializarToggleButtons(asientosOcupados);
     }//GEN-LAST:event_ButtonContinuarActionPerformed
-    
-    
+
+
     private void Hora_proyeccion(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Hora_proyeccion
         // TODO add your handling code here:
     }//GEN-LAST:event_Hora_proyeccion
@@ -491,7 +503,7 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
     }//GEN-LAST:event_Asiento2ActionPerformed
 
     private void Asiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asiento1ActionPerformed
-       
+
     }//GEN-LAST:event_Asiento1ActionPerformed
 
     private void Asiento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Asiento3ActionPerformed
@@ -569,12 +581,12 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
     private void LabelPeliculaimgComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_LabelPeliculaimgComponentAdded
 
     }//GEN-LAST:event_LabelPeliculaimgComponentAdded
-    
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -601,21 +613,51 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
             }
         });
     }
-    
-    private List<Integer> obtenerAsientosSeleccionados() {
-    List<Integer> asientosSeleccionados = new ArrayList<>();
 
-    // Iterar sobre los ToggleButtons para obtener los asientos seleccionados
-    for (JToggleButton toggleButton : listaToggleButtons) {
-        if (toggleButton.isSelected()) {
-            // Obtener el número de asiento y agregarlo a la lista de asientos seleccionados
-            int numeroAsiento = Integer.parseInt(toggleButton.getText());
-            asientosSeleccionados.add(numeroAsiento);
+    private List<Integer> obtenerAsientosSeleccionados() {
+        if (listaToggleButtons == null) {
+            // Inicializar la lista si es nula
+            listaToggleButtons = new ArrayList<>();
+        }
+        List<Integer> asientosSeleccionados = new ArrayList<>();
+
+        // Iterar sobre los ToggleButtons para obtener los asientos seleccionados
+        for (JToggleButton toggleButton : listaToggleButtons) {
+            if (toggleButton.isSelected()) {
+                // Obtener el número de asiento y agregarlo a la lista de asientos seleccionados
+                int numeroAsiento = Integer.parseInt(toggleButton.getText());
+                asientosSeleccionados.add(numeroAsiento);
+            }
+        }
+
+        return asientosSeleccionados;
+    }
+
+    private void cargarAsientosOcupados() {
+        asientosOcupados = new HashSet<>();
+
+        try {
+            ObjectInputStream entrada = new ObjectInputStream(new FileInputStream("informacionpelis.dat"));
+            RegistroVenta registroVenta = (RegistroVenta) entrada.readObject();
+            entrada.close();
+
+            // Obtener los asientos ocupados del objeto RegistroVenta
+            asientosOcupados.addAll(registroVenta.getAsientosSeleccionados());
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 
-    return asientosSeleccionados;
-}
+    private void inicializarToggleButtons(List<Integer> asientosOcupados) {
+        // Iterar sobre los ToggleButtons y deshabilitar los asientos ocupados
+        for (JToggleButton toggleButton : listaToggleButtons) {
+            int numeroAsiento = Integer.parseInt(toggleButton.getText());
+
+            if (asientosOcupados.contains(numeroAsiento)) {
+                toggleButton.setEnabled(false);
+            }
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton Asiento1;
     private javax.swing.JToggleButton Asiento10;

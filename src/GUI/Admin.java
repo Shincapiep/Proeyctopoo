@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package GUI;
+
 import Data.*;
+import java.io.File;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LENOVO
@@ -119,24 +123,35 @@ public class Admin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       this.dispose();
-       Admin_Cliente Cliente1 = new Admin_Cliente();
-       Cliente1.setVisible(true);
+        this.dispose();
+        Admin_Cliente Cliente1 = new Admin_Cliente();
+        Cliente1.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        Sala_cine Salac = new Sala_cine ();
+        Sala_cine Salac = new Sala_cine();
         Salac.mostrarEstadisticas();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-            this.dispose();
-            admin_trabajador trabajo = new admin_trabajador();
-            trabajo.setVisible(true);
+        this.dispose();
+        admin_trabajador trabajo = new admin_trabajador();
+        trabajo.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
+        File archivo = new File("informacionpelis.dat");
+
+        if (archivo.delete()) {
+          JOptionPane.showMessageDialog(null,"La sala ha sido limpiada correctamente",
+                                    "Sala de cine" ,JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null,"no se pudo limpiar la sala",
+                                    "Sala de cine" ,JOptionPane.ERROR_MESSAGE);
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
