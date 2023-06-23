@@ -248,16 +248,17 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
             }
         });
 
-        Labelimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camara.png"))); // NOI18N
+        Labelimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/asiento-de-cine.png"))); // NOI18N
 
         javax.swing.GroupLayout PanelAsientosLayout = new javax.swing.GroupLayout(PanelAsientos);
         PanelAsientos.setLayout(PanelAsientosLayout);
         PanelAsientosLayout.setHorizontalGroup(
             PanelAsientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelAsientosLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(PanelAsientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PanelAsientosLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(PanelAsientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(PanelAsientosLayout.createSequentialGroup()
                                 .addGap(95, 95, 95)
@@ -299,7 +300,6 @@ public class SelecMovieAsientos extends javax.swing.JFrame {
                                     .addComponent(Asiento15, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(Labelseleccioneasientos, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelAsientosLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
                         .addComponent(Labelimagen)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ButtonContinuar)))

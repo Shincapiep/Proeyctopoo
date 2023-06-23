@@ -246,7 +246,7 @@ public class SelecAsientosSerpiente extends javax.swing.JFrame {
             }
         });
 
-        Labelimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/camara.png"))); // NOI18N
+        Labelimagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/asiento-de-cine.png"))); // NOI18N
 
         javax.swing.GroupLayout PanelAsientosLayout = new javax.swing.GroupLayout(PanelAsientos);
         PanelAsientos.setLayout(PanelAsientosLayout);
