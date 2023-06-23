@@ -20,6 +20,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jButtonAgregar = new javax.swing.JButton();
         jButtonEliminar = new javax.swing.JButton();
         jButtonBuscar = new javax.swing.JButton();
@@ -28,6 +29,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         jButtonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/agregar-usuario.png"))); // NOI18N
+        jButtonAgregar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAgregarActionPerformed(evt);
@@ -35,6 +37,8 @@ public class Admin_Cliente extends javax.swing.JFrame {
         });
 
         jButtonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/basura (1).png"))); // NOI18N
+        jButtonEliminar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonEliminar.setBorderPainted(false);
         jButtonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEliminarActionPerformed(evt);
@@ -42,6 +46,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
         });
 
         jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/evaluacion.png"))); // NOI18N
+        jButtonBuscar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBuscarActionPerformed(evt);
@@ -49,6 +54,7 @@ public class Admin_Cliente extends javax.swing.JFrame {
         });
 
         jButtonMostrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cliente.png"))); // NOI18N
+        jButtonMostrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButtonMostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonMostrarActionPerformed(evt);
@@ -60,48 +66,66 @@ public class Admin_Cliente extends javax.swing.JFrame {
         jLabel2.setText("Administrar clientes.");
 
         jButton1.setText("volver");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(141, 141, 141)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(149, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addComponent(jButtonAgregar)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButtonEliminar)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButtonBuscar)
+                            .addGap(18, 18, 18)
+                            .addComponent(jButtonMostrar))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(28, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(132, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(14, 14, 14))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButtonMostrar)
+                        .addComponent(jButtonBuscar)
+                        .addComponent(jButtonEliminar)
+                        .addComponent(jButtonAgregar))
+                    .addContainerGap(38, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(59, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButtonAgregar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonEliminar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonMostrar)
-                        .addGap(39, 39, 39))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(176, 176, 176)
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonMostrar)
-                    .addComponent(jButtonBuscar)
-                    .addComponent(jButtonEliminar)
-                    .addComponent(jButtonAgregar))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(7, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -137,5 +161,6 @@ public class Admin_Cliente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEliminar;
     private javax.swing.JButton jButtonMostrar;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

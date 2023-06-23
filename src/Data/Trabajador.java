@@ -97,7 +97,7 @@ public class Trabajador extends Persona {
         String Id_a_buscar;
         FileInputStream fis = null;
         DataInputStream leer = null;
-        Id_a_buscar = JOptionPane.showInputDialog(null, "Digite la identificacion del trabajador que quiere buscar", "Buscar Contacto", JOptionPane.QUESTION_MESSAGE);
+        Id_a_buscar = JOptionPane.showInputDialog(null, "Digite la identificacion del trabajador que quiere buscar", "Buscar trabajador", JOptionPane.QUESTION_MESSAGE);
 
         try {
             fis = new FileInputStream("Trabajador");
@@ -107,8 +107,8 @@ public class Trabajador extends Persona {
                 Identificacion = leer.readUTF();
                 Telefono = leer.readUTF();
                 if (Identificacion.equals(Id_a_buscar)) {  //Condicional para comparar String caracter por caracter
-                    JOptionPane.showMessageDialog(null, "Nombre: " + Nombre + "\n Identificacion del Trabajador: " + Identificacion,
-                             "Datos Personales del Trabajador" + "Telefono: " + Telefono, JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Nombre: " + Nombre + "\n Identificacion del Trabajador: " + Identificacion
+                             + "\nTelefono: " + Telefono,"Datos Personales del Trabajador" , JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         } catch (FileNotFoundException e) {

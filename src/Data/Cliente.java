@@ -101,7 +101,6 @@ public class Cliente extends Persona {
     }
 
     public void buscar_cliente() {
-
         String Id_a_buscar;
         FileInputStream fis = null;
         DataInputStream leer = null;
@@ -114,15 +113,13 @@ public class Cliente extends Persona {
                 Nombre = leer.readUTF();
                 Identificacion = leer.readUTF();
                 Telefono = leer.readUTF();
-                Direccion = leer.readUTF();
-
                 if (Identificacion.equals(Id_a_buscar)) {  //Condicional para comparar String caracter por caracter
                     JOptionPane.showMessageDialog(null, "Nombre: " + Nombre + "\n Identificacion del cliente: " + Identificacion
-                            + "\n Direccion del cliente: " + Direccion + "\nTelefono: " + Telefono, "Datos Personales del cliente", JOptionPane.INFORMATION_MESSAGE);
+                            + "\nTelefono: " + Telefono, "Datos Personales del cliente", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.println("El archivo Cliente no existe " + e.getMessage());
+            System.out.println("El archivo cliente no existe " + e.getMessage());
         } catch (EOFException e) {
             System.out.println("Fin de Archivo");
         } catch (IOException e1) {
@@ -141,61 +138,60 @@ public class Cliente extends Persona {
             }
         }
     }
-    
+
     public void Eliminar_cliente() {
-    String identificacion = JOptionPane.showInputDialog(null, "Digite la identificación del cliente que desea eliminar", "Eliminar cliente", JOptionPane.QUESTION_MESSAGE);
+        String identificacion = JOptionPane.showInputDialog(null, "Digite la identificación del cliente que desea eliminar", "Eliminar cliente", JOptionPane.QUESTION_MESSAGE);
 
-    File archivo = new File("Cliente");
-    File archivoTemporal = new File("Cliente.tmp");
-    FileInputStream fis = null;
-    DataInputStream dis = null;
-    FileOutputStream fos = null;
-    DataOutputStream dos = null;
+        File archivo = new File("Cliente");
+        File archivoTemporal = new File("Cliente.tmp");
+        FileInputStream fis = null;
+        DataInputStream dis = null;
+        FileOutputStream fos = null;
+        DataOutputStream dos = null;
 
-    try {
-        fis = new FileInputStream(archivo);
-        dis = new DataInputStream(fis);
-        fos = new FileOutputStream(archivoTemporal);
-        dos = new DataOutputStream(fos);
-
-        while (fis.available() > 0) {
-            String nombre = dis.readUTF();
-            String identificacionActual = dis.readUTF();
-            String telefono = dis.readUTF();
-          
-
-            if (!identificacionActual.equals(identificacion)) {
-                dos.writeUTF(nombre);
-                dos.writeUTF(identificacionActual);
-                dos.writeUTF(telefono);
-                
-            }
-        }
-    } catch (FileNotFoundException e) {
-        System.out.println(e.getMessage());
-    } catch (IOException e) {
-        System.out.println(e.getMessage());
-    } finally {
         try {
-            if (fis != null) {
-                fis.close();
+            fis = new FileInputStream(archivo);
+            dis = new DataInputStream(fis);
+            fos = new FileOutputStream(archivoTemporal);
+            dos = new DataOutputStream(fos);
+
+            while (fis.available() > 0) {
+                String nombre = dis.readUTF();
+                String identificacionActual = dis.readUTF();
+                String telefono = dis.readUTF();
+
+                if (!identificacionActual.equals(identificacion)) {
+                    dos.writeUTF(nombre);
+                    dos.writeUTF(identificacionActual);
+                    dos.writeUTF(telefono);
+
+                }
             }
-            if (dis != null) {
-                dis.close();
-            }
-            if (fos != null) {
-                fos.close();
-            }
-            if (dos != null) {
-                dos.close();
-            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
         } catch (IOException e) {
             System.out.println(e.getMessage());
+        } finally {
+            try {
+                if (fis != null) {
+                    fis.close();
+                }
+                if (dis != null) {
+                    dis.close();
+                }
+                if (fos != null) {
+                    fos.close();
+                }
+                if (dos != null) {
+                    dos.close();
+                }
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
         }
-    }
 
-    // Renombrar el archivo temporal al nombre original
-    archivo.delete();
-    archivoTemporal.renameTo(archivo);
-}
+        // Renombrar el archivo temporal al nombre original
+        archivo.delete();
+        archivoTemporal.renameTo(archivo);
+    }
 }
